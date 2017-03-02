@@ -96,7 +96,7 @@ function timeElapse(date){
   var s = current.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  var result = "<span class=\"digit\"> Tues, 26 Apr 2016 " +h+ ":" +m+ ":" +s+ "</span>";
+  var result = "<span class=\"digit\">" + moment().format('LL') +"<br />"+ +h+ ":" +m+ ":" +s+ "</span>";
   $("#elapseClock").html(result);
 }
 
@@ -108,20 +108,16 @@ function checkTime(i){
 function showMessages() {
   adjustWordsPosition();
   $('#messages').fadeIn(5000, function() {
-    showLoveU();
+    showBigMessage();
   });
 }
 
 function adjustWordsPosition() {
   $('#words').css("position", "absolute");
-  $('#words').css("top", $("#garden").position().top + 195);
-  $('#words').css("left", $("#garden").position().left + 70);
+  $('#words').css("top", $("#garden").position().top + 270);
+  $('#words').css("left", $("#garden").position().left + 120);
 }
 
-function adjustCodePosition() {
-  $('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
-}
-
-function showLoveU() {
-  $('#loveu').fadeIn(3000);
+function showBigMessage() {
+  $('#big-mess').fadeIn(3000);
 }

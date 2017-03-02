@@ -5,6 +5,7 @@ pConfigs = {
   day: "04",
   hour: 8,
   minute: 10,
-  signature: ""
+  signature: "MD with love!",
+  largeMessage: "お誕生日おめでとうございます。"
 }
 
