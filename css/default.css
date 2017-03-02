@@ -1,0 +1,130 @@
+body{
+  margin:0;
+  padding:0;
+  font-size:12px;
+  overflow:auto;
+  font-family: 'Inconsolata' !important;
+  background: black;
+}
+
+#content{
+  width:100%;
+  min-height: 400px;
+
+  display: flex;
+  display: -webkit-flex;
+
+  justify-content: space-around;
+  align-items: center:
+}
+
+#left-block{
+  color:#333;
+  font-size:14px
+  flex-basis: 50%;
+  padding: 30px;
+}
+
+#left-block .string{
+  color:#2a36ff
+}
+#left-block .bold-red-string {
+  color:#aa3333;
+  font-weight:bold;
+}
+#left-block .bold-green-string {
+  color: #508050;
+  font-weight: bold;
+}
+#left-block .print {
+  color: #1aefd6;
+}
+#left-block .hpbd {
+  color: #ffffee;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#left-block .keyword{
+  color:#7f0055;
+  font-weight:bold
+}
+
+#left-block .placeholder{
+  margin-left:15px
+}
+
+#left-block .space{
+  margin-left:7px
+}
+
+#left-block .comments{
+  color:#3f7f5f
+}
+
+#right-block{
+  flex-basis: 50%;
+  height: 625px;
+  padding: 30px;
+}
+
+#garden{
+  width:100%;
+  height:100%
+}
+
+#elapseClock{
+  text-align:right;
+  font-size:18px;
+  margin-top:10px;
+  margin-bottom:0px
+}
+
+#words{
+  width:500px;
+  font-size:24px;
+  color:#666
+}
+
+#messages{
+  display:none
+}
+
+#elapseClock .digit
+{
+  font-family:"digit";
+  font-size:36px
+}
+
+#loveu
+ {
+  padding:5px;
+  font-size:22px;
+  margin-top:30px;
+  margin-right:0px;
+  text-align:center;
+  display:none
+}
+
+#loveu .signature{
+  margin-top:10px;
+  font-size:20px;
+}
+
+#clickSound{
+  display:none
+}
+
+#errorMsg{
+  width:100%;
+  text-align:center;
+  font-size:24px;
+  position:absolute;
+  top:100px;
+  left:0
+}
+
+canvas {
+  cursor: crosshair;
+  display: block;
+}

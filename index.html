@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Happy Birthday</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Inconsolata' !important;
+      src: url('resources/Inconsolata.otf') format("truetype");
+    }
+  </style>
+  <link href="css/default.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/garden.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+</head>
+
+<body>
+  <div id="content">
+    <div id="left-block">
+      <span class="comments">/**</span></br>
+      <span class="comments">* Hôm nay, 20/03/2016 - là ngày sinh nhật em</span></br>
+      <span class="comments">* Nên anh làm món quà nhỏ chúc mừng sinh nhật em trong ngày đặc biệt này.</span></br>
+      <span class="comments">**/</span></br>
+      <span class="string">Girl</span>&nbsp&nbsp <span class="bold-green-string">u </span>&nbsp&nbsp <span class="string">= </span> <span class="keyword">new</span> <span class="string">&nbsp&nbsp Girl ( Uyen )</span></br>
+      <span class="bold-red-string">while(true) { </span>  </br>
+      <span class="comments">&nbsp&nbsp&nbsp&nbsp//May mắn</span> </br>
+      <span class="bold-red-string">&nbsp&nbsp&nbsp&nbsp u.fortune ++; </span> </br>
+      <span class="comments">&nbsp&nbsp&nbsp&nbsp//Sức khoẻ</span></br>
+      <span class="bold-red-string">&nbsp&nbsp&nbsp&nbsp u.healthy ++;</span></br>
+      <span class="comments">&nbsp&nbsp&nbsp&nbsp//Hạnh phúc</span></br>
+      <span class="bold-red-string">&nbsp&nbsp&nbsp&nbspu.happiness ++;</span></br>
+      <span class="comments">&nbsp&nbsp&nbsp&nbsp//Và mọi điều tốt đẹp nhất sẽ đến với em.</span></br>
+      <span class="bold-red-string">} </span> </br></br>
+
+      <span class="print">printf("</span><span class="hpbd">CHÚC MỪNG SINH NHẬT!</span><span class="print">");</span>
+    </div> <!-- end left-block -->
+
+    <div id="right-block">
+      <canvas id="garden"></canvas>
+      <div id="words">
+        <div id="messages">
+          Hôm nay, một ngày vui, cảm ơn bạn đã đến bên tớ!
+          <div id="elapseClock"></div>
+        </div>
+        <div id="loveu">
+          <span style="color:#FFFFFF">
+          <big>
+            Happy Birthday!
+          </big>
+          </span><br />
+          <div class="signature">
+          </div>
+         </div>
+      </div>
+    </div> <!-- end right-block -->
+    </div>
+
+    <!-- for fireworks -->
+    <canvas id="fireworksCanvas"></canvas>
+  </div> <!-- end content -->
+
+  <script type="text/javascript">
+    // set site title
+    document.title = pConfigs.title;
+    $(".signature").text(pConfigs.signature);
+
+    var birthday = new Date();
+    birthday.setFullYear(pConfigs.year, pConfigs.month, pConfigs.day);
+    birthday.setHours(pConfigs.hour);
+    birthday.setMinutes(pConfigs.minute);
+    birthday.setSeconds(0);
+    birthday.setMilliseconds(0);
+
+    if (!document.createElement('canvas').getContext) {
+      var msg = document.createElement("div");
+      msg.id = "errorMsg";
+      msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+      document.body.appendChild(msg);
+      document.execCommand("stop");
+    } else {
+      setTimeout(function () {
+        startGiftAnimation();
+      }, 5000);
+
+      setInterval(function () {
+        timeElapse(birthday);
+      }, 500);
+
+      adjustCodePosition();
+      $("#left-block").typewriter();
+    }
+  </script>
+  <script type="text/javascript" src="js/fireworks.js"></script>
+  <audio autoplay loop> <source src="resources/hpbd_song.mp3" type="audio/mpeg"></audio>
+
+</body>
+</html>
