@@ -114,8 +114,8 @@ function showMessages() {
 
 function adjustWordsPosition() {
   $('#words').css("position", "absolute");
-  $('#words').css("top", $("#garden").position().top + 270);
-  $('#words').css("left", $("#garden").position().left + 120);
+  $('#words').css("top", 300);
+  $('#words').css("left", 0);
 }
 
 function showBigMessage() {
