@@ -1,11 +1,11 @@
 pConfigs = {
-  title: "HPBD",
+  title: "お誕生日おめでとうございます。",
   year: "1992",
-  month: "09",
-  day: "04",
+  month: "03",
+  day: "08",
   hour: 8,
   minute: 10,
-  signature: "MD with love!",
+  signature: "MD with",
   largeMessage: "お誕生日おめでとうございます。"
 }
 

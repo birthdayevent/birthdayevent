@@ -51,7 +51,9 @@
             Happy Birthday!
           </big>
           </span><br />
-          <div class="signature">
+          <div class="signature blink-me">
+            <span class="text"></span>
+            <span class="heart">♥!!</span>
           </div>
          </div>
       </div>
@@ -62,10 +64,15 @@
     <canvas id="fireworksCanvas"></canvas>
   </div> <!-- end content -->
 
+  <div class="address">
+    <p>日程：　3月9日（木）10:00より</p>
+    <p>場所：MTGroom 4-1</p>
+  </div>
+
   <script type="text/javascript">
     // set site title
     document.title = pConfigs.title;
-    $(".signature").text(pConfigs.signature);
+    $(".signature .text").text(pConfigs.signature);
     $(".large-mess-text").text(pConfigs.largeMessage);
 
     var birthday = new Date();
